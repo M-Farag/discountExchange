@@ -6,6 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 
 ## [Unreleased]
+
 ## [0.0.3] - 2022-05-08
 ### Added
 - Discount Created Event
@@ -18,6 +19,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - BootUpSeeder to build the main objects
 - Feature Test for User Can get discount codes
 - User can get discount codes
+
 
 ## [0.0.1] - 2022-05-08
 ### Added

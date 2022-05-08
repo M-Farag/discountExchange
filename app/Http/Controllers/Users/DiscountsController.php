@@ -52,6 +52,7 @@ class DiscountsController extends Controller
         // Update coupon
         $coupon->discount_codes_generated +=1;
         $coupon->save();
+
         event(new DiscountCodeCreated($discount));
         return (new DiscountResource($discount));
 
