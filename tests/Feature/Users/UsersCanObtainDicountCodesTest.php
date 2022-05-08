@@ -14,7 +14,7 @@ uses(RefreshDatabase::class);
 test('Authenticated user can get discount on a valid coupon',function (){
     $brand = Brand::factory()->create();
     $user = User::factory()->create();
-    $coupon = Coupon::factory()->create();
+    $coupon = Coupon::factory()->create(['brand_id'=>$brand->id]);
 
 
     $this->actingAs($user,'api');
@@ -28,9 +28,11 @@ test('Authenticated user can get discount on a valid coupon',function (){
 
     $response->assertStatus(201);
     $response->assertJson(fn (AssertableJson $json) =>
-    $json->has('data')
-        ->hasAny(['code','brand_id','user_id','coupon_id'])
-    );
-    $response->assertJsonPath('data.code', fn ($code) => strlen($code) >= 3);
 
+    $json->has('data')
+    );
+
+    $response->assertJsonPath('data.code', fn ($code) => strlen($code) >= 3);
+    $coupon->refresh();
+    $this->assertEquals(1,$coupon->discount_codes_generated);
 });

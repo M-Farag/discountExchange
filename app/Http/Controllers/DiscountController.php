@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Http\Requests\StoreDiscountRequest;
 use App\Http\Requests\UpdateDiscountRequest;
+use App\Http\Requests\Users\StoreDiscountRequest;
 use App\Models\Discount;
 
 class DiscountController extends Controller
@@ -31,7 +31,7 @@ class DiscountController extends Controller
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \App\Http\Requests\StoreDiscountRequest  $request
+     * @param  \App\Http\Requests\Users\StoreDiscountRequest  $request
      * @return \Illuminate\Http\Response
      */
     public function store(StoreDiscountRequest $request)

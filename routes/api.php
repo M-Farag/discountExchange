@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Brands\CouponsController;
+use App\Http\Controllers\Users\DiscountsController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -22,4 +23,10 @@ Route::middleware('auth:api')->get('/user', function (Request $request) {
 // Brand routes
 Route::prefix('v1/brand')->middleware('auth:api')->group(function (){
     Route::post('/coupons',[CouponsController::class,'store']);
+});
+
+
+//User Routes
+Route::prefix('v1/user')->middleware('auth:api')->group(function (){
+    Route::post('/discounts',[DiscountsController::class,'store']);
 });

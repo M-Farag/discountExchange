@@ -38,7 +38,7 @@ class CouponFactory extends Factory
 
             'discount_code_max_length'=> 10,
             'discount_code_type'=>CouponDiscountCodesTypeEnums::RANDOM_STRING->value,
-            'discount_code_valid_for_max_hours_of'=>5,
+            'discount_code_valid_for_max_hours_of'=>24,
             'trigger'=>'customer_created',
             'expires_at'=>now()->addDays(10)
 
