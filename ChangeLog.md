@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [0.0.1] - 2022-05-08
 ### Added
 - User Status Enum class
+- Brand DataModel & Migration file
 
 ### Changed
 - User Model to have external ID and Status
