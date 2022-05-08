@@ -2,16 +2,14 @@
 
 namespace App\Models;
 
-use App\Enums\UserStatusEnums;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
+use App\Enums\BrandStatusEnums;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Foundation\Auth\User as Authenticatable;
-use Illuminate\Notifications\Notifiable;
-use Laravel\Passport\HasApiTokens;
+use Illuminate\Database\Eloquent\Model;
 
-class User extends Authenticatable
+class Brand extends Model
 {
-    use HasApiTokens, HasFactory, Notifiable;
+    use HasFactory;
+
 
     /**
      * The attributes that are mass assignable.
@@ -21,7 +19,6 @@ class User extends Authenticatable
     protected $fillable = [
         'external_id',
         'name',
-        'email',
         'password',
         'status',
     ];
@@ -35,6 +32,7 @@ class User extends Authenticatable
         'password',
     ];
 
+
     /**
      * The attributes that should be cast.
      *
@@ -43,7 +41,7 @@ class User extends Authenticatable
     protected $casts = [
         'external_id'=>'string',
         'name'=>'string',
-        'email'=>'string',
-        'status'=> UserStatusEnums::class,
+        'status'=> BrandStatusEnums::class,
     ];
+
 }
