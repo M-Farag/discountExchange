@@ -10,6 +10,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Added
 - User Status Enum class
 - Brand DataModel & Migration file
+- Coupon DataModel & Migration file
 
 ### Changed
 - User Model to have external ID and Status
