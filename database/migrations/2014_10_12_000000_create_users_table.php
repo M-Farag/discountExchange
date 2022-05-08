@@ -18,6 +18,8 @@ return new class extends Migration
             $table->string('external_id')->unique();
             $table->string('name')->nullable();
             $table->string('email')->nullable();
+            $table->string('email_verified_at')->nullable();
+            $table->string('password_confirmation')->nullable();
             $table->string('password')->nullable();
             $table->tinyInteger('status')->default(\App\Enums\UserStatusEnums::ACTIVE->value);
             $table->timestamps();

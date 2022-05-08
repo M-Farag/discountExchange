@@ -39,7 +39,7 @@ return new class extends Migration
             $table->integer('discount_code_valid_for_max_hours_of')->nullable();
 
 
-            $table->string('trigger',100);
+            $table->string('trigger',100)->nullable();
 
             $table->dateTime('expires_at')->nullable();
             $table->timestamps();
