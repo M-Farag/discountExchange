@@ -25,7 +25,6 @@ class CouponFactory extends Factory
             'name' => 'coupon_name-'.Str::random(5),
             'brand_id'=> Brand::factory(),
 
-
             'max_redemptions'=> 1000,
             'max_discount_codes'=> 1000,
 

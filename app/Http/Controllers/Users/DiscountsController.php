@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Users;
 
 use App\Enums\DiscountStatusEnums;
+use App\Events\DiscountCodeCreated;
 use App\Http\Controllers\Controller;
 use App\Http\Requests\Users\StoreDiscountRequest;
 use App\Http\Resources\DiscountResource;
@@ -52,6 +53,7 @@ class DiscountsController extends Controller
         $coupon->discount_codes_generated +=1;
         $coupon->save();
 
+        event(new DiscountCodeCreated($discount));
         return (new DiscountResource($discount));
 
     }
