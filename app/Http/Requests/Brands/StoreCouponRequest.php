@@ -3,6 +3,7 @@
 namespace App\Http\Requests\Brands;
 
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Validation\Rule;
 
 class StoreCouponRequest extends FormRequest
 {
@@ -24,7 +25,7 @@ class StoreCouponRequest extends FormRequest
     public function rules()
     {
         return [
-            'name'=>['required','string','min:3','max:255','unique:coupons'],
+            'name'=>['required','string','min:3','max:255',Rule::unique('coupons')->where(fn ($query) => $query->where('brand_id', request('brand_id')))],
             'brand_id'=>['required','numeric'],
             'percentage'=>['required_without:flat_rate','numeric'],
             'flat_rate'=>['required_without:percentage','numeric'],
