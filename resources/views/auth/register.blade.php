@@ -19,6 +19,14 @@
                 <x-input id="name" class="block mt-1 w-full" type="text" name="name" :value="old('name')" required autofocus />
             </div>
 
+            <br>
+            <!-- External ID -->
+            <div>
+                <x-label for="external_id" :value="__('Externa ID')" />
+
+                <x-input id="external_id" class="block mt-1 w-full" type="text" name="external_id" :value="old('external_id')" required autofocus />
+            </div>
+
             <!-- Email Address -->
             <div class="mt-4">
                 <x-label for="email" :value="__('Email')" />
