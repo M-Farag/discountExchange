@@ -29,7 +29,7 @@ class CouponFactory extends Factory
             'max_discount_codes'=> 100,
 
             'percentage' => '0.23',
-            'max_rate'=> '15',
+            'percentage_max_rate'=> '15',
 
             'flat_rate'=>'10',
             'currency'=>'USD',

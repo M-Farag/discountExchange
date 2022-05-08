@@ -18,14 +18,16 @@ return new class extends Migration
             $table->string('name');
             $table->unsignedBigInteger('brand_id');
 
-            $table->integer('max_redemptions')->nullable();
-            $table->integer('max_discount_codes')->nullable();
-
-            $table->decimal('percentage')->nullable();
-            $table->decimal('max_rate')->nullable();
 
             $table->decimal('flat_rate')->nullable();
+            $table->decimal('percentage')->nullable();
+            $table->decimal('percentage_max_rate')->nullable();
+
+
             $table->string('currency',5)->nullable();
+
+            $table->integer('max_redemptions')->nullable();
+            $table->integer('max_discount_codes')->nullable();
 
             $table->tinyInteger('status')->default(\App\Enums\CouponStatusEnums::ACTIVE->value);
 
@@ -34,6 +36,7 @@ return new class extends Migration
             $table->tinyInteger('discount_code_type')->default(\App\Enums\CouponDiscountCodesTypeEnums::RANDOM_STRING->value);
             $table->integer('discount_codes_generated')->default(0);
             $table->integer('discount_codes_redeemed')->default(0);
+            $table->integer('discount_code_valid_for_max_hours_of')->nullable();
 
 
             $table->string('trigger',100);
