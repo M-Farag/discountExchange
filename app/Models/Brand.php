@@ -44,4 +44,10 @@ class Brand extends Model
         'status'=> BrandStatusEnums::class,
     ];
 
+
+    public function users()
+    {
+        return $this->belongsToMany(User::class,'brand_user');
+    }
+
 }

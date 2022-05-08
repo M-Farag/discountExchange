@@ -46,4 +46,13 @@ class User extends Authenticatable
         'email'=>'string',
         'status'=> UserStatusEnums::class,
     ];
+
+    /**
+     * User belongs to many brands
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
+    public function brands()
+    {
+        return $this->belongsToMany(Brand::class,'brand_user');
+    }
 }
