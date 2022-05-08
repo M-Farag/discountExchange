@@ -31,7 +31,9 @@ class Coupon extends Model
         'discount_code_type',
         'discount_code_valid_for_max_hours_of',
         'trigger',
-        'expires_at'
+        'expires_at',
+        'discount_codes_generated',
+        'discount_codes_redeemed'
     ];
 
 
@@ -49,6 +51,8 @@ class Coupon extends Model
         'discount_code_type'=>CouponDiscountCodesTypeEnums::class,
         'discount_code_valid_for_max_hours_of'=>'integer',
         'trigger'=>'string',
-        'expires_at'=>'datetime'
+        'expires_at'=>'datetime',
+        'discount_codes_generated'=> 'integer',
+        'discount_codes_redeemed' => 'integer'
     ];
 }
