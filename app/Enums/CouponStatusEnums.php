@@ -2,7 +2,7 @@
 
 namespace App\Enums;
 
-enum UserStatusEnums:int
+enum CouponStatusEnums:int
 {
     case INACTIVE = 0;
     case ACTIVE = 1;
