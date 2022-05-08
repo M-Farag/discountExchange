@@ -1,7 +1,8 @@
 <?php
 
-namespace App\Http\Requests;
+namespace App\Http\Requests\Users;
 
+use App\Rules\CouponCanGenerateADiscount;
 use Illuminate\Foundation\Http\FormRequest;
 
 class StoreDiscountRequest extends FormRequest
@@ -13,7 +14,7 @@ class StoreDiscountRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        return true;
     }
 
     /**
@@ -24,7 +25,8 @@ class StoreDiscountRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'coupon_id'=>['required','numeric',new CouponCanGenerateADiscount()],
+            'brand_id'=>['required','numeric']
         ];
     }
 }

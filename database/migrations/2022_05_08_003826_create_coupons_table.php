@@ -32,7 +32,7 @@ return new class extends Migration
             $table->tinyInteger('status')->default(\App\Enums\CouponStatusEnums::ACTIVE->value);
 
 
-            $table->integer('discount_code_max_length')->nullable();
+            $table->integer('discount_code_max_length')->default('8');
             $table->tinyInteger('discount_code_type')->default(\App\Enums\CouponDiscountCodesTypeEnums::RANDOM_STRING->value);
             $table->integer('discount_codes_generated')->default(0);
             $table->integer('discount_codes_redeemed')->default(0);
