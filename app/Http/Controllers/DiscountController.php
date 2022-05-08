@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+
 use App\Http\Requests\UpdateDiscountRequest;
 use App\Http\Requests\Users\StoreDiscountRequest;
 use App\Models\Discount;
