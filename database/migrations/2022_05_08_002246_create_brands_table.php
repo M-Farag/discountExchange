@@ -13,15 +13,12 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('users', function (Blueprint $table) {
+        Schema::create('brands', function (Blueprint $table) {
             $table->id();
             $table->string('external_id')->unique();
-            $table->string('name')->nullable();
-            $table->string('email')->nullable();
-            $table->string('email_verified_at')->nullable();
-            $table->string('password_confirmation')->nullable();
+            $table->string('name',150);
             $table->string('password')->nullable();
-            $table->tinyInteger('status')->default(\App\Enums\UserStatusEnums::ACTIVE->value);
+            $table->tinyInteger('status')->default(\App\Enums\BrandStatusEnums::ACTIVE->value);
             $table->timestamps();
         });
     }
@@ -33,6 +30,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('users');
+        Schema::dropIfExists('brands');
     }
 };
