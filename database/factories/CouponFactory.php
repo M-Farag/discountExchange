@@ -25,13 +25,13 @@ class CouponFactory extends Factory
             'name' => 'coupon_name-'.Str::random(5),
             'brand_id'=> Brand::factory(),
 
-            'max_redemptions'=> 100,
-            'max_discount_codes'=> 100,
+            'max_redemptions'=> 1000,
+            'max_discount_codes'=> 1000,
 
-            'percentage' => '0.23',
-            'percentage_max_rate'=> '15',
+            'percentage' => 0.23,
+            'percentage_max_rate'=> 15,
 
-            'flat_rate'=>'10',
+            'flat_rate'=>10,
             'currency'=>'USD',
 
             'status'=>CouponStatusEnums::ACTIVE->value,
