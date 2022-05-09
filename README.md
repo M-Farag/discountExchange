@@ -230,7 +230,8 @@ curl --request POST \
 
 ## System Design snapshot
 
-image
+![System_design_snapshot](https://user-images.githubusercontent.com/42836754/167325326-672fc5d9-b00d-49bb-a737-ba68e88d2e6d.png)
+
 
 <hr>
 
