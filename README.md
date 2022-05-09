@@ -10,8 +10,6 @@ _You can watch the quick video I attached below or go over the following steps_
 - Composer
 - Docker desktop
 
-<hr>
-
 ### Steps in order
 
 #### 1) Clone the repo to your machine
@@ -64,7 +62,9 @@ php artisan key:generate
 
 <hr>
 
-### Watch the quick setup Video 
+#### Watch the quick setup Video 
+
+https://www.loom.com/share/c224b435be9f4e449173cd9397e4a469
 
 
 <hr>
