@@ -1,16 +1,22 @@
 ## Discount Exchange
 an elegant API driven discounts exchange manager.
-<hr>
+
 
 ## How to set up the application on your machine ?!
 
 _You can watch the quick video I attached below or go over the following steps_
 
+### Quick 🏃 Video
+
+- https://www.loom.com/share/c224b435be9f4e449173cd9397e4a469
+
 ### Requirements
 - Composer
 - Docker desktop
 
-### Steps in order
+<br>
+
+### Steps in order ✨
 
 #### 1) Clone the repo to your machine
 ```
@@ -62,14 +68,14 @@ php artisan key:generate
 
 <hr>
 
-#### Watch the quick setup Video 
+#### Watch the quick setup Video 🚀 🎥
 
-https://www.loom.com/share/c224b435be9f4e449173cd9397e4a469
+- https://www.loom.com/share/c224b435be9f4e449173cd9397e4a469
 
 
 <hr>
 
-### Testing
+### Testing 🔬🧪
 
 - I'm using the PEST framework, you can easily run all the feature tests by running the following command
 
@@ -79,7 +85,7 @@ https://www.loom.com/share/c224b435be9f4e449173cd9397e4a469
 
 <hr>
 
-## API EndPoints
+## API EndPoints 🦾 🚀
 
 - The API collection is committed to the repo with the file name of [ *api_collection_Insomnia_2022-05-09.json* ]
 
@@ -227,5 +233,5 @@ curl --request POST \
 image
 
 <hr>
-_Thanks for your time_ <br>
+_Thanks for your time_ 👋 <br>
 _Mina_
